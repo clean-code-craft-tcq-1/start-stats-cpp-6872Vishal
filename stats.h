@@ -1,6 +1,6 @@
 #include <vector>
 
-Class Stats
+class Stats
 {
 Public:
 float average;
