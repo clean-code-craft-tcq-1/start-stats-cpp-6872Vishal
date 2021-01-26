@@ -6,7 +6,7 @@ Stats Statistics::ComputeStatistics(const std::vector<float>&g ) {
     float Max,Min,avg = 0;
     int Maxsize = g.size();
     
-    Max = Min = g.begin();
+    Max = Min = g[0];
     for(auto i= g.begin();i != g.end(); i++)
     {
         if(Max < *i)
