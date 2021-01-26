@@ -2,6 +2,7 @@
 
 Stats Statistics::ComputeStatistics(const std::vector<float>&g ) {
     //Implement statistics here
+    Stats tempstats;
     float Max,Min,avg = 0;
     int Maxsize = g.size();
     
@@ -20,4 +21,9 @@ Stats Statistics::ComputeStatistics(const std::vector<float>&g ) {
     }
     
     avg = avg/Maxsize;
+    tempstats.average = avg;
+    tempstats.min = Min;
+    tempstats.max = Max;
+    
+    return tempstats;
 }
