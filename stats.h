@@ -2,7 +2,7 @@
 
 class Stats
 {
-Public:
+public:
 float average;
 float min;
 float max;
