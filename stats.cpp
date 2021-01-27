@@ -47,7 +47,7 @@ void StatsAlerter::checkAndAlert(const std::vector<float>&InputValues)
     {
         if(*i > Max_value)
         {
-            for(int j = 0;j < Alert.size(); j++)
+            for(unsigned int j = 0;j < Alert.size(); j++)
             {
                 Alert[j]->alertsystem();
             }
