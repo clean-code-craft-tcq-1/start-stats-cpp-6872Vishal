@@ -32,9 +32,7 @@ Stats Statistics::ComputeStatistics(const std::vector<float>&g ) {
     }
     else
     {
-    tempstats.average = NAN;
-    tempstats.min = NAN;
-    tempstats.max = NAN;
+        return NAN;
     }
 }
 
