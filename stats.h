@@ -46,6 +46,7 @@ class StatsAlerter:public IAlerter
     Max_value = M;
     Alert = A;
     }
+    void alretsystem() = 0;
     void checkAndAlert(const std::vector<float>& );
 };
 
