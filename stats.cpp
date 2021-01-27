@@ -27,3 +27,16 @@ Stats Statistics::ComputeStatistics(const std::vector<float>&g ) {
     
     return tempstats;
 }
+
+void StatsAlerter::checkAndAlert(const std::vector<float>&InputValues)
+{
+    for(auto i = InputValues.begin();i != InputValues.end();i++)
+    {
+        if(*i >= Max_value)
+        {
+           alert[0]->alertsystem();
+           alert[1]->alertsystem();
+            break;
+        }
+    }
+}
