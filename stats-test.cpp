@@ -1,7 +1,6 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 
 #include "catch.hpp"
-#include <math.h>
 #include "stats.h"
 
 #include <cmath>
@@ -18,11 +17,11 @@ TEST_CASE("average is NaN for empty array") {
     auto computedStats = Statistics::ComputeStatistics({});
     //All fields of computedStats (average, max, min) must be
     //NAN (not-a-number), as defined in math.h
-    
+    float not_a_number = NAN;
     //Design the REQUIRE statement here.
-    REQUIRE(computedStats.max == NAN);
-    REQUIRE(computedStats.min == NAN);
-    REQUIRE(computedStats.average == NAN);
+    REQUIRE(computedStats.max == not_a_number);
+    REQUIRE(computedStats.min == not_a_number);
+    REQUIRE(computedStats.average == not_a_number);
     //Use http://www.cplusplus.com/reference/cmath/isnan/
 }
 
