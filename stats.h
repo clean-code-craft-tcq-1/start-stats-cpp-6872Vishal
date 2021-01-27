@@ -13,20 +13,22 @@ class IAlerter{};
 class EmailAlert
 {
     public:
-    auto emailSent;
+    bool emailSent;
 };
 
 class LEDAlert
 {
     public:
-    auto ledGlows;
+    bool ledGlows;
 };
 
 class StatsAlerter
 {
+    private :
+    float Max_value;
  public:
-    StatsAlerter(int x,const std::vector<IAlerter> Alert);
-    checkAndAlert(const std::vector<float>&value);
+    StatsAlerter(const float Max_value,const std::vector<IAlerter**> Alert);
+    void checkAndAlert(const std::vector<float>&value);
 };
 
 namespace Statistics {
