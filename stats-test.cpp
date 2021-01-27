@@ -19,8 +19,6 @@ TEST_CASE("average is NaN for empty array") {
     //NAN (not-a-number), as defined in math.h
     float not_a_number = NAN;
     //Design the REQUIRE statement here.
-    REQUIRE(computedStats.max == not_a_number);
-    REQUIRE(computedStats.min == not_a_number);
     REQUIRE(computedStats.average == not_a_number);
     //Use http://www.cplusplus.com/reference/cmath/isnan/
 }
