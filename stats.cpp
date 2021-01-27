@@ -1,4 +1,5 @@
 #include "stats.h"
+#include <math.h>
 
 Stats Statistics::ComputeStatistics(const std::vector<float>&g ) {
     //Implement statistics here
@@ -6,6 +7,8 @@ Stats Statistics::ComputeStatistics(const std::vector<float>&g ) {
     float Max,Min,avg = 0;
     int Maxsize = g.size();
     
+    if(Maxsize != NULL)
+    {
     Max = Min = g[0];
     for(auto i= g.begin();i != g.end(); i++)
     {
@@ -26,6 +29,13 @@ Stats Statistics::ComputeStatistics(const std::vector<float>&g ) {
     tempstats.max = Max;
     
     return tempstats;
+    }
+    else
+    {
+    tempstats.average = NAN;
+    tempstats.min = NAN;
+    tempstats.max = NAN;
+    }
 }
 
 void StatsAlerter::checkAndAlert(const std::vector<float>&InputValues)
