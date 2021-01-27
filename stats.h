@@ -1,4 +1,5 @@
 #include <vector>
+#include <stdbool.h>
 
 class Stats
 {
@@ -15,9 +16,8 @@ public:
 
 class EmailAlert:public IAlerter
 {
-   private :
-    bool emailSent;
    public:
+    bool emailSent;
     void alretsystem()
     {
         //Send email
@@ -27,10 +27,9 @@ class EmailAlert:public IAlerter
 
 class LEDAlert:public IAlerter
 {
-    private :
-     bool ledGlows;
     public:
-        void alretsystem()
+     bool ledGlows;
+     void alretsystem()
     {
         //Turn On LED
         ledGlows = TRUE;
@@ -39,10 +38,9 @@ class LEDAlert:public IAlerter
 
 class StatsAlerter:public IAlerter
 {
-    private :
-     float Max_value;
-     std::vector<IAlerter*> Alert;
- public:
+   public:
+    float Max_value;
+    std::vector<IAlerter*> Alert;
     StatsAlerter(const float &M,std::vector<IAlerter*> &A)
     {
     Max_value = M;
