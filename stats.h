@@ -1,5 +1,4 @@
 #include <vector>
-#include <stdbool.h>
 
 class Stats
 {
@@ -17,22 +16,22 @@ public:
 class EmailAlert:public IAlerter
 {
    public:
-    bool emailSent;
+    bool emailSent = 0;
     void alretsystem()
     {
         //Send email
-        emailSent = TRUE;
+        emailSent = 1;
     }
 };
 
 class LEDAlert:public IAlerter
 {
     public:
-     bool ledGlows;
+     bool ledGlows = 0;
      void alretsystem()
     {
         //Turn On LED
-        ledGlows = TRUE;
+        ledGlows = 1;
     }
 };
 
