@@ -18,8 +18,7 @@ TEST_CASE("average is NaN for empty array") {
     //All fields of computedStats (average, max, min) must be
     //NAN (not-a-number), as defined in math.h
     unsigned int result;
-    float not_a_number = NAN;
-    if(computedStats.average == not_a_number)
+    if(computedStats.average == NAN)
     {
         result = 1;
     }
